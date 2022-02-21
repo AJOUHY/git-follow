@@ -1,0 +1,16 @@
+<form>
+    <legend>New Post</legend>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input [(ngModel)]="post.title" name="title" type="text" class="form-control" id="title" placeholder="Title">
+    </div>
+    <button *ngIf="status" (click)="createPost()" class="btn btn-primary">Add</button>
+    <button *ngIf="!status" (click)="updatePost()" class="btn btn-danger">Update</button>
+</form>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let post of posts">
+        <p>{{ post.id }} {{ post.title }}</p>
+        <button type="button" (click)="editPost(post)" class="btn btn-warning">Edit</button>
+        <button type="button" (click)="deletePost(post)" class="btn btn-danger">Delete</button>
+    </li>
+</ul>

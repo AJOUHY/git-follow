@@ -1,0 +1,62 @@
+<!--
+<ul class="nav nav-pills">
+    <li [class.active]="viewCourse == 'Laravel'">
+      <a (click)="viewCourse = 'Laravel'" class="nav-link" href="#">Laravel</a>
+    </li>
+    <li [class.active]="viewCourse == 'Laravel'">
+      <a (click)="viewCourse = 'Angular'" class="nav-link" href="#">Angular</a>
+    </li>
+    <li [class.active]="viewCourse == 'Symfony'">
+      <a (click)="viewCourse = 'Symfony'" class="nav-link" href="#">Symfony</a>
+    </li>
+  </ul>
+<div [ngSwitch]="viewCourse">
+    <div *ngSwitchCase="'Laravel'">Lorem Laravel</div>
+    <div *ngSwitchCase="'Angular'">Lorem Angular</div>
+    <div *ngSwitchCase="'Symfony'">Lorem Symfony</div>
+    <div *ngSwitchDefault>other</div>
+</div>
+-->
+<!--<ul>
+    <li *ngFor="let course of Courses; first as isEven">
+        <span *ngIf="isEven">Even - </span> {{ course.id }}  {{ course.title }}
+    </li>
+</ul>-->
+<!--
+<button (click)="loadCourses()">Load</button>
+<button class="btn btn-success" (click)="addCourse()">Add</button>
+
+<ul>
+    <li *ngFor="let course of Courses; trackBy: trackCourse">
+        {{ course.id }}  {{ course.title }}
+        <button class="btn btn-danger" (click)="deleteCourse(course)">Delete</button>
+        <button class="btn btn-warning" (click)="editCourse(course)">Edit</button>
+</li>
+<br><br>
+<button class="btn"
+    [ngClass]="{
+        'btn-success': good,
+        'btn-danger': !good
+    }"
+    (click)="checkStatus()"
+>bouton
+
+</button><br><br>
+<input [ngStyle]="{
+    'color': good ? 'red' : 'blue',
+    'font-size': good ? '30px' : '18px'
+}" type="submit" value="valider" (click)="checkStatus()"/>
+
+<h2>{{ person.adresse?.ville }}</h2>
+
+<input type="text" [appInputFormat]="'ffff'">
+<br/><br/>-->
+<!--<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <signup-form></signup-form>>
+  </div>
+</div>-->
+<!--<app-posts></app-posts>-->
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+

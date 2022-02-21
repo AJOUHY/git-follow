@@ -1,0 +1,21 @@
+<h1>Notre Course component</h1>
+<ul>
+    <li>Java</li>
+    <li>Angular</li>
+    <li>Symfony</li>
+</ul>
+<h2>{{ titre }}</h2>
+<div (click)="divClick()">
+    <button (click)="onClick($event)" class="btn btn-primary" [class.active]="isActive">Activer</button>
+</div>
+<input [(ngModel)]="email" type="text" (keyup.enter)="onKeyUp()"/>
+<h2>{{ email }}</h2>
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">Titre: {{ course.titre | uppercase | lowercase }}</li>
+        <li class="list-group-item">Ratting: {{ course.avis | number:'2.1-1' }}</li>
+        <li class="list-group-item">Students: {{ course.participants }}</li>
+        <li class="list-group-item">Prix: {{ course.prix | currency:'MAD':'symbol':'3.1-1' }}</li>
+        <li class="list-group-item">releaseDate: {{ course.publication | date:'yyyy-mm-dd' }}</li>
+    </ul>
+</div>
